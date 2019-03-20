@@ -1,6 +1,6 @@
 {
   "name": "confirm-modal-context-hook",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "author": "Sosuke Suzuki <aosukeke@gmail.com>",
