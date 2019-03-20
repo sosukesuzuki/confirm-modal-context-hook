@@ -33,7 +33,7 @@ export default {
     external(),
     copy([
       {
-        files: ["src/index.tsx"],
+        files: ["src/**.{ts,tsx}"],
         dest: "example/src/confirm-modal-context-hook"
       }
     ])
