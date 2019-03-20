@@ -8,13 +8,22 @@ import {
 type ModalProps = {
   message: string;
   exec: (...args: any[]) => void;
+  cancel: () => void;
 };
 
-function Modal({ message, exec }: ModalProps) {
+function Modal({ message, exec, cancel }: ModalProps) {
   return (
-    <div>
+    <div
+      style={{
+        width: "700px",
+        height: "400px",
+        margin: "0 auto",
+        backgroundColor: "white"
+      }}
+    >
       <h1>{message}</h1>
-      <button onClick={exec}>Exec</button>
+      <button onClick={exec}>Yes</button>
+      <button onClick={cancel}>No</button>
     </div>
   );
 }
@@ -22,7 +31,7 @@ function Modal({ message, exec }: ModalProps) {
 function Content() {
   const configureModal = useConfirmModal({
     exec: () => console.log("EXEC!!"),
-    message: "THIS IS MODAL"
+    message: 'May I output "EXEC!!" to console?'
   });
   return (
     <div>
