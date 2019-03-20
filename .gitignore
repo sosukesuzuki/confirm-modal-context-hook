@@ -1,0 +1,6 @@
+/**/node_modules
+/**/dist
+/**/.cache
+/example/src/confirm-modal-context-hook
+/**/yarn-error.log
+.DS_Store
