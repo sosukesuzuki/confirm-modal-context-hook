@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "author": "Sosuke Suzuki <aosukeke@gmail.com>",
   "license": "MIT",
   "scripts": {
