@@ -34,7 +34,27 @@ export function ConfirmModalProvider({ Component, children }: Props) {
       >
         {children}
       </ConfirmModalContext.Provider>
-      {isModalOpen && <Component exec={exec} message={message} />}
+      {isModalOpen && (
+        <>
+          <div
+            onClick={() => setIsModalOpen(false)}
+            style={{
+              position: "absolute",
+              width: "100vw",
+              height: "100vh",
+              top: 0,
+              bottom: 0,
+              left: 0,
+              rihht: 0,
+              backgroundColor: "rgba(1, 1, 1, 0.5)",
+              zIndex: -1
+            }}
+          />
+          <div style={{ backgroundColor: "white" }}>
+            <Component exec={exec} message={message} />
+          </div>
+        </>
+      )}
     </>
   );
 }
